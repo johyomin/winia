@@ -64,14 +64,24 @@ body {
     display: block;
     width: 100%;
     height: 90px;
-    background-color: yellow;
 }
 
 .header .inner .logo img {
     position: relative;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
     display: block;
-    width: 97px;
+    width: 141px;
     height: 24px;
+}
+
+.header .inner .gnb .menu {
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 13%;
 }
 
 .header .inner .gnb .menu li {
@@ -80,18 +90,31 @@ body {
     float: left;
     color: #222;
     font-size: 16px;
+    font-weight: bold;
+    padding: 33px 7px 33px 35px;
+    letter-spacing: -0.4px;
 }
 
-.header .inner .gnb .user{
+.header .inner .gnb .user {
     float: right;
 }
 
-.header .inner .gnb .user li {
+.header .inner .gnb .user li a {
     position: relative;
     display: block;
     float: left;
     color: #999;
     font-size: 14px;
+    padding: 20px 5px;
+}
+
+.header .inner .gnb .user li .update {
+    position: absolute;
+    top: 5px;
+    color: #FFF;
+    font-size: 6px;
+    background: #36B4E5;
+    padding: 0 7px;
 }
 
 /* visual */
