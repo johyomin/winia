@@ -76,6 +76,7 @@ body {
     height: 24px;
 }
 
+/* gnb left */
 .header .inner .gnb .menu {
     position: absolute;
     display: block;
@@ -84,7 +85,7 @@ body {
     left: 13%;
 }
 
-.header .inner .gnb .menu li {
+.header .inner .gnb .menu>li {
     position: relative;
     display: block;
     float: left;
@@ -95,26 +96,76 @@ body {
     letter-spacing: -0.4px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* gnb right */
 .header .inner .gnb .user {
-    float: right;
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 1%;
+    transform: translateY(-50%);
+}
+
+.header .inner .gnb .user li {
+    position: relative;
+    display: block;
+    float: left;
+    /* border: 1px solid red; */
+    margin: 0px 3px 5px 5px;
 }
 
 .header .inner .gnb .user li a {
     position: relative;
     display: block;
-    float: left;
     color: #999;
     font-size: 14px;
     padding: 20px 5px;
+
 }
 
-.header .inner .gnb .user li .update {
+.header .inner .gnb .user li .new {
     position: absolute;
     top: 5px;
     color: #FFF;
     font-size: 6px;
     background: #36B4E5;
     padding: 0 7px;
+}
+
+.header .inner .gnb .user li .catalog img,
+.header .inner .gnb .user li .e-shop img {
+    margin-left: 5px;
+}
+
+.header .inner .gnb .user .bar {
+    position: relative;
+    display: block;
+    width: 1px;
+    height: 20px;
+    background-color: #e0e0e0;
+    margin: 20px 15px;
+}
+
+.header .inner .gnb .user li .login img {
+    width: 21px;
+    height: 21px;
+
+}
+
+.header .inner .gnb .user li .search img {
+    width: 21px;
+    height: 21px;
 }
 
 /* visual */
