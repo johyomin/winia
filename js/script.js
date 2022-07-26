@@ -21,7 +21,7 @@
 
 window.onload = function () {
     // swiper
-    let swvisual = new Swiper('.sw-visual', {
+    let swVisual = new Swiper('.sw-visual', {
         effect: "fade",
         loop: true,
         autoplay: {
@@ -43,41 +43,43 @@ window.onload = function () {
     swPause.click(function () {
 
         let temp = $(this).hasClass('sw-visual-play');
+
         if (temp == false) {
 
             $(this).addClass('sw-visual-play');
             // 슬라이드 멈추기
-            swvisual.autoplay.stop();
+            swVisual.autoplay.stop();
 
         } else {
 
             $(this).removeClass('sw-visual-play');
             // 슬라이드 재생
-            swvisual.autoplay.start();
-
+            swVisual.autoplay.start();
         }
-
-
-
-
     });
 
+    // 탭메뉴를 저장한다.
+    let slideMenu = $('.slide-menu a');
+    $.each(slideMenu, function (index, item) {
+        $(this).click(function (event) {
+            // href 막기
+            event.preventDefault();
+            swSlide.slideTo(index + 1);;
+        });
+    });
+
+    // 처음 에 슬라이드 표현을 위해서 0 번이 포커스 된다.
+    slideMenu.eq(0).addClass('slide-menu-active');
+
+    let swSlide = new Swiper('.sw-slide', {
+        loop: true
+    });
+
+    swSlide.on('slideChange', function () {
+        // 일단 모두 포커스 class 지운다.
+        slideMenu.removeClass('slide-menu-active');
+        // 나는 포커스 들어간다.
+        slideMenu.eq(swSlide.realIndex).addClass('slide-menu-active');
+    });
 
 };
-
-window.onload = function () {
-
-    let swMenu = new Swiper('.sw-menu', {
-        slidesPerView: 4
-    });
-
-    let swItem = new Swiper('.sw-item', {
-        loop: true,
-        thumbs: {
-            swiper: swMenu,
-        },
-    });
-
-
-
-}
