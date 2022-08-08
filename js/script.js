@@ -1,23 +1,23 @@
-// $(document).ready(function () {
-//     $('html').css('overflow', 'hidden');
+$(document).ready(function () {
+    $('html').css('overflow', 'hidden');
 
-//     let modalWrap = $('.modal-wrap');
-//     let modalClose = $('.modal-close');
-//     modalClose.click(function () {
-//         modalWrap.stop().fadeOut(100);
-//         $('html').css('overflow', 'auto');
-//     });
+    let modalWrap = $('.modal-wrap');
+    let modalClose = $('.modal-close');
+    modalClose.click(function () {
+        modalWrap.stop().fadeOut(100);
+        $('html').css('overflow', 'auto');
+    });
 
-//     let modalMain = $('.modal-main');
-//     modalMain.click(function (event) {
-//         event.stopPropagation();
-//     });
-//     modalWrap.click(function () {
-//         modalWrap.stop().fadeOut(100);
-//         $('html').css('overflow', 'auto');
-//     });
+    let modalMain = $('.modal-main');
+    modalMain.click(function (event) {
+        event.stopPropagation();
+    });
+    modalWrap.click(function () {
+        modalWrap.stop().fadeOut(100);
+        $('html').css('overflow', 'auto');
+    });
 
-// });
+});
 
 window.onload = function () {
     // swiper
@@ -58,17 +58,17 @@ window.onload = function () {
         }
     });
 
-    // 탭메뉴를 저장한다.
+    // item sw
     let slideMenu = $('.slide-menu a');
     $.each(slideMenu, function (index, item) {
         $(this).click(function (event) {
             // href 막기
             event.preventDefault();
-            swSlide.slideTo(index + 1);;
+            swSlide.slideTo(index + 1);
         });
     });
 
-    // 처음 에 슬라이드 표현을 위해서 0 번이 포커스 된다.
+
     slideMenu.eq(0).addClass('slide-menu-active');
 
     let swSlide = new Swiper('.sw-slide', {
@@ -76,10 +76,65 @@ window.onload = function () {
     });
 
     swSlide.on('slideChange', function () {
-        // 일단 모두 포커스 class 지운다.
         slideMenu.removeClass('slide-menu-active');
-        // 나는 포커스 들어간다.
         slideMenu.eq(swSlide.realIndex).addClass('slide-menu-active');
     });
 
-};
+
+    // popular sw
+    let popularMenu = $('.popular-menu a');
+    $.each(popularMenu, function (index, item) {
+        $(this).click(function (event) {
+            // href 막기
+            event.preventDefault();
+            swPopular.slideTo(index + 1);
+        });
+    });
+
+
+    popularMenu.eq(0).addClass('popular-menu-active');
+
+    let swPopular = new Swiper('.sw-popular', {
+        loop: true
+    });
+
+    swPopular.on('slideChange', function () {
+        popularMenu.removeClass('popular-menu-active');
+        popularMenu.eq(swPopular.realIndex).addClass('popular-menu-active');
+    });
+
+
+    // ap-kitchen sw
+    let apMenu = $('.ap-menu a');
+    $.each(apMenu, function (index, item) {
+        $(this).click(function (event) {
+            // href 막기
+            event.preventDefault();
+            swApKit.slideTo(index + 1);
+        });
+    });
+
+
+    apMenu.eq(0).addClass('ap-menu-active');
+
+    let swApKit = new Swiper('.sw-ap', {
+    });
+
+    swApKit.on('slideChange', function () {
+        apMenu.removeClass('ap-menu-active');
+        apMenu.eq(swApKit.realIndex).addClass('ap-menu-active');
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

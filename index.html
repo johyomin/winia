@@ -30,8 +30,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css"
         integrity="sha512-gMjQeDaELJ0ryCI+FtItusU9MkAifCZcGq789FrzkiM49D8lbDhoaUaIX4ASU187wofMNlgBJ4ckbrXM9sE6Pg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <link rel="stylesheet" href="css/fontello/css/animation.css">
-    <link rel="stylesheet" href="css/fontello/css/fontello.css"> -->
+    <link rel="stylesheet" href="css/fontello/css/animation.css">
+    <link rel="stylesheet" href="css/fontello/css/fontello.css">
 
     <!--[if lt IE 9]> 
     <script src="js/html5shiv.js"></script>
@@ -47,7 +47,7 @@
 
 <body>
     <!-- 안내창 -->
-    <!-- <div class="modal-wrap">
+    <div class="modal-wrap">
         <div class="modal-main">
             <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
             <h1>위니아 클론코딩</h1>
@@ -55,19 +55,19 @@
                 &middot; 이 사이트는 <b>스터디용</b>으로 제작되었으며 리소스는 <b>원저작자</b>에게 있습니다.<br>
                 &middot; 해당 사이트 관련 문제사항 발생시 즉시 삭제하겠습니다.<br>
                 &middot; 문의 사항이 있으실 경우
-                <strong> <a href="mailto:scnly222@naver.com">scnly222@naver.com</a></strong>으로 연락부탁드립니다.<br>
+                <a href="mailto:scnly222@naver.com">[scnly222@naver.com]</a>으로 연락부탁드립니다.<br>
                 &middot; 본 사이트는 Chrome 에 최적화되어 있습니다.
             </p>
             <button class="modal-close"></button>
         </div>
-    </div> -->
+    </div>
     <div class="wrap">
         <!-- header -->
         <header class="header">
             <div class="inner">
                 <a href="#" class="logo"></a>
 
-                <div class="gnb">
+                <nav class="gnb">
                     <ul class="menu">
                         <li class="kitchen"><a href="#">주방가전</a>
                             <ul class="depth1 clearfix">
@@ -246,7 +246,7 @@
                         <li><a href="#" class="login"><img src="images/icon_man_g.svg" alt="login"></a></li>
                         <li><a href="#" class="search"><img src="images/icon_search@3x.png" alt="search"></a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
         </header>
 
@@ -332,14 +332,15 @@
 
         <!-- new-item -->
         <section class="new-item">
-            <!-- 슬라이드 내용 -->
-            <div class="slide-menu">
-                <a href="#">신제품 출시</a>
-                <a href="#">나만의 프렌치 레시피</a>
-                <a href="#">위니아 여름맞이템</a>
-                <a href="#">선물 추천템</a>
+            <div class="inner">
+                <!-- 슬라이드 내용 -->
+                <div class="slide-menu">
+                    <a href="#">신제품 출시</a>
+                    <a href="#">나만의 프렌치 레시피</a>
+                    <a href="#">위니아 여름맞이템</a>
+                    <a href="#">선물 추천템</a>
+                </div>
             </div>
-
             <div class="swiper-container sw-slide">
                 <div class="swiper-wrapper">
 
@@ -442,16 +443,427 @@
 
         <!-- popular-item -->
         <section class="popular-item">
+            <h2>인기 추천 가전</h2>
+            <div class="popular-menu">
+                <a href="#">에어가전</a>
+                <a href="#">생활가전</a>
+                <a href="#">주방가전</a>
+            </div>
+            <div class="swiper-container sw-popular">
+                <div class="swiper-wrapper">
 
+                    <div class="swiper-slide sw-popular-1">
+                        <div class="inner">
+                            <div class="popular-box">
+                                <img src="images/popular-item-1.1.png" alt="위니아 에어컨 벽걸이형 22.8㎡">
+                                <p>위니아 에어컨 벽걸이형 22.8㎡</p>
+                                <a href="#" class="popular-more">자세히보기 <img src="images/ico_half_arr.svg" alt="arr"></a>
+                            </div>
+                            <div class="popular-box">
+                                <img src="images/popular-item-1.2.png" alt="위니아 에어컨 스탠드형 56.2㎡">
+                                <p>위니아 에어컨 스탠드형 56.2㎡</p>
+                                <a href="#" class="popular-more">자세히보기 <img src="images/ico_half_arr.svg" alt="arr"></a>
+                            </div>
+                            <div class="popular-box">
+                                <img src="images/popular-item-1.3.png" alt="위니아 에어컨 멀티형 56.2+22.8㎡">
+                                <p>위니아 에어컨 멀티형 56.2+22.8㎡</p>
+                                <a href="#" class="popular-more">자세히보기 <img src="images/ico_half_arr.svg" alt="arr"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide sw-popular-2">
+                        <div class="inner">
+                            <div class="popular-box">
+                                <img src="images/popular-item-2.1.png" alt="위니아 스마트 패키지 (세탁기 12kg + 건조기 10kg)">
+                                <p>위니아 스마트 패키지 (세탁기 12kg + 건조기 10kg)</p>
+                                <a href="#" class="popular-more">자세히보기 <img src="images/ico_half_arr.svg" alt="arr"></a>
+                            </div>
+                            <div class="popular-box">
+                                <img src="images/popular-item-2.2.png" alt="위니아 일반 세탁기 21kg">
+                                <p>위니아 일반 세탁기 21kg</p>
+                                <a href="#" class="popular-more">자세히보기 <img src="images/ico_half_arr.svg" alt="arr"></a>
+                            </div>
+                            <div class="popular-box">
+                                <img src="images/popular-item-2.3.png" alt="위니아 드럼 세탁기 23kg">
+                                <p>위니아 드럼 세탁기 23kg</p>
+                                <p>1,599,000원</p>
+                                <a href="#" class="popular-more">자세히보기 <img src="images/ico_half_arr.svg" alt="arr"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide sw-popular-3">
+                        <div class="inner">
+                            <div class="popular-box">
+                                <img src="images/popular-item-3.1.png" alt="위니아 프렌치 냉장고 870L">
+                                <p>위니아 프렌치 냉장고 870L</p>
+                                <a href="#" class="popular-more">자세히보기 <img src="images/ico_half_arr.svg" alt="arr"></a>
+                            </div>
+                            <div class="popular-box">
+                                <img src="images/popular-item-3.2.png" alt="위니아 프렌치 냉장고 870L">
+                                <p>위니아 프렌치 냉장고 870L</p>
+                                <a href="#" class="popular-more">자세히보기 <img src="images/ico_half_arr.svg" alt="arr"></a>
+                            </div>
+                            <div class="popular-box">
+                                <img src="images/popular-item-3.3.png" alt="위니아 냉장고 830L">
+                                <p>위니아 냉장고 830L</p>
+                                <a href="#" class="popular-more">자세히보기 <img src="images/ico_half_arr.svg" alt="arr"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- appliances -->
+        <section class="appliances">
+            <div class="swiper-container sw-ap">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide ap-kitchen1">
+                        <div class="inner">
+                            <h2 class="ap-title">주방가전</h2>
+                            <div class="ap-menu">
+                                <a href="#">냉장고/냉동고</a>
+                                <a href="#">김치냉장고</a>
+                                <a href="#">전기밥솥</a>
+                                <a href="#">오븐/전자레인지</a>
+                                <a href="#">전기레인지</a>
+                                <a href="#">주방소형가전</a>
+                            </div>
+                            <h2 class="ap-subtitle">위니아 냉장고/냉동고</h2>
+                            <p class="ap-text">나만의 라이프스타일에 맞춰 편리하게!<br>
+                                어떤 공간에서도 실속있게!</p>
+                            <a href="#" class="ico-half-arr"><img src="images/ico_half_arr_w.svg" alt="arr"></a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide ap-kitchen2">
+                        <div class="inner">
+                            <h2 class="ap-title">주방가전</h2>
+                            <div class="ap-menu">
+                                <a href="#">냉장고/냉동고</a>
+                                <a href="#">김치냉장고</a>
+                                <a href="#">전기밥솥</a>
+                                <a href="#">오븐/전자레인지</a>
+                                <a href="#">전기레인지</a>
+                                <a href="#">주방소형가전</a>
+                            </div>
+                            <h2 class="ap-subtitle">오리지널 딤채</h2>
+                            <p class="ap-text">대한민국 김치냉장고의 기준</p>
+                            <a href="#" class="ico-half-arr"><img src="images/ico_half_arr_w.svg" alt="arr"></a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide ap-kitchen3">
+                        <div class="inner">
+                            <h2 class="ap-title">주방가전</h2>
+                            <div class="ap-menu">
+                                <a href="#">냉장고/냉동고</a>
+                                <a href="#">김치냉장고</a>
+                                <a href="#">전기밥솥</a>
+                                <a href="#">오븐/전자레인지</a>
+                                <a href="#">전기레인지</a>
+                                <a href="#">주방소형가전</a>
+                            </div>
+                            <h2 class="ap-subtitle">딤채쿡 당질저감 밥솥</h2>
+                            <p class="ap-text">탄수화물을 반으로 줄여 날씨한 집 밥</p>
+                            <a href="#" class="ico-half-arr"><img src="images/ico_half_arr_w.svg" alt="arr"></a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide ap-kitchen4">
+                        <div class="inner">
+                            <h2 class="ap-title">주방가전</h2>
+                            <div class="ap-menu">
+                                <a href="#">냉장고/냉동고</a>
+                                <a href="#">김치냉장고</a>
+                                <a href="#">전기밥솥</a>
+                                <a href="#">오븐/전자레인지</a>
+                                <a href="#">전기레인지</a>
+                                <a href="#">주방소형가전</a>
+                            </div>
+                            <h2 class="ap-subtitle">위니아 오븐/전자레인지</h2>
+                            <p class="ap-text">재료 본연의 맛과 풍미가 살아 있는 일품 요리의 완성</p>
+                            <a href="#" class="ico-half-arr"><img src="images/ico_half_arr_w.svg" alt="arr"></a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide ap-kitchen5">
+                        <div class="inner">
+                            <h2 class="ap-title">주방가전</h2>
+                            <div class="ap-menu">
+                                <a href="#">냉장고/냉동고</a>
+                                <a href="#">김치냉장고</a>
+                                <a href="#">전기밥솥</a>
+                                <a href="#">오븐/전자레인지</a>
+                                <a href="#">전기레인지</a>
+                                <a href="#">주방소형가전</a>
+                            </div>
+                            <h2 class="ap-subtitle">위니아 전기레인지</h2>
+                            <p class="ap-text">요리는 빠르게, 주방은 안전하고 쾌적하게</p>
+                            <a href="#" class="ico-half-arr"><img src="images/ico_half_arr_w.svg" alt="arr"></a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide ap-kitchen6">
+                        <div class="inner">
+                            <h2 class="ap-title">주방가전</h2>
+                            <div class="ap-menu">
+                                <a href="#">냉장고/냉동고</a>
+                                <a href="#">김치냉장고</a>
+                                <a href="#">전기밥솥</a>
+                                <a href="#">오븐/전자레인지</a>
+                                <a href="#">전기레인지</a>
+                                <a href="#">주방소형가전</a>
+                            </div>
+                            <h2 class="ap-subtitle">위니아 주방소형가전</h2>
+                            <p class="ap-text">다양한 라이프 스타일에 따라 편리하게!<br>
+                                어떤 공간에서도 실속있게!</p>
+                            <a href="#" class="ico-half-arr"><img src="images/ico_half_arr_w.svg" alt="arr"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="appliances">
+            <div class="swiper-container sw-ap">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide ap-life1">
+                        <div class="inner">
+                            <h2 class="ap-title">생활가전</h2>
+                            <div class="ap-menu">
+                                <a href="#">세탁기</a>
+                                <a href="#">건조기</a>
+                                <a href="#">TV</a>
+                                <a href="#">비데</a>
+                                <a href="#">헬스케어</a>
+                            </div>
+                            <h2 class="ap-subtitle">위니아 공기방울 세탁기</h2>
+                            <p class="ap-text">공기방울로 옷감 손상없이 깨끗하고 말끔한 세탁</p>
+                            <a href="#" class="ico-half-arr"><img src="images/ico_half_arr_w.svg" alt="arr"></a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide ap-life2">
+                        <div class="inner">
+                            <h2 class="ap-title">생활가전</h2>
+                            <div class="ap-menu">
+                                <a href="#">세탁기</a>
+                                <a href="#">건조기</a>
+                                <a href="#">TV</a>
+                                <a href="#">비데</a>
+                                <a href="#">헬스케어</a>
+                            </div>
+                            <h2 class="ap-subtitle">위니아 크린 건조기</h2>
+                            <p class="ap-text">위니아의 전문 기술로 365일 깨끗하고 뽀송하게</p>
+                            <a href="#" class="ico-half-arr"><img src="images/ico_half_arr_w.svg" alt="arr"></a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide ap-life3">
+                        <div class="inner">
+                            <h2 class="ap-title">생활가전</h2>
+                            <div class="ap-menu">
+                                <a href="#">세탁기</a>
+                                <a href="#">건조기</a>
+                                <a href="#">TV</a>
+                                <a href="#">비데</a>
+                                <a href="#">헬스케어</a>
+                            </div>
+                            <h2 class="ap-subtitle">위니아 TV</h2>
+                            <p class="ap-text">마치 눈앞에서 보는 것처럼 더욱 생생한 화질</p>
+                            <a href="#" class="ico-half-arr"><img src="images/ico_half_arr_w.svg" alt="arr"></a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide ap-life4">
+                        <div class="inner">
+                            <h2 class="ap-title">생활가전</h2>
+                            <div class="ap-menu">
+                                <a href="#">세탁기</a>
+                                <a href="#">건조기</a>
+                                <a href="#">TV</a>
+                                <a href="#">비데</a>
+                                <a href="#">헬스케어</a>
+                            </div>
+                            <h2 class="ap-subtitle">위니아 비데</h2>
+                            <p class="ap-text">365일 깨끗하고 편리한 관리</p>
+                            <a href="#" class="ico-half-arr"><img src="images/ico_half_arr_w.svg" alt="arr"></a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide ap-life5">
+                        <div class="inner">
+                            <h2 class="ap-title">생활가전</h2>
+                            <div class="ap-menu">
+                                <a href="#">세탁기</a>
+                                <a href="#">건조기</a>
+                                <a href="#">TV</a>
+                                <a href="#">비데</a>
+                                <a href="#">헬스케어</a>
+                            </div>
+                            <h2 class="ap-subtitle">위니아me 헬스케어</h2>
+                            <p class="ap-text">건강관리를 위한 가정용 헬스케어 디바이스</p>
+                            <a href="#" class="ico-half-arr"><img src="images/ico_half_arr_w.svg" alt="arr"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="appliances">
+            <div class="swiper-container sw-ap">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide ap-air1">
+                        <div class="inner">
+                            <h2 class="ap-title">에어가전</h2>
+                            <div class="ap-menu">
+                                <a href="#">에어컨</a>
+                                <a href="#">공기청정기</a>
+                                <a href="#">제습기</a>
+                                <a href="#">에어워셔 가습기</a>
+                                <a href="#">스포워셔</a>
+                            </div>
+                            <h2 class="ap-subtitle">위니아 에어컨</h2>
+                            <p class="ap-text">취향에 따라 선택하는 맞춤컬러 & 맞춤바람</p>
+                            <a href="#" class="ico-half-arr"><img src="images/ico_half_arr_w.svg" alt="arr"></a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide ap-air2">
+                        <div class="inner">
+                            <h2 class="ap-title">에어가전</h2>
+                            <div class="ap-menu">
+                                <a href="#">에어컨</a>
+                                <a href="#">공기청정기</a>
+                                <a href="#">제습기</a>
+                                <a href="#">에어워셔 가습기</a>
+                                <a href="#">스포워셔</a>
+                            </div>
+                            <h2 class="ap-subtitle">위니아 공기청정기</h2>
+                            <p class="ap-text">색다른 컬러의 360˚ 입체청정</p>
+                            <a href="#" class="ico-half-arr"><img src="images/ico_half_arr_w.svg" alt="arr"></a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide ap-air3">
+                        <div class="inner">
+                            <h2 class="ap-title">에어가전</h2>
+                            <div class="ap-menu">
+                                <a href="#">에어컨</a>
+                                <a href="#">공기청정기</a>
+                                <a href="#">제습기</a>
+                                <a href="#">에어워셔 가습기</a>
+                                <a href="#">스포워셔</a>
+                            </div>
+                            <h2 class="ap-subtitle">위니아 제습기</h2>
+                            <p class="ap-text">제습은 이제기본! <br>
+                                듀얼 컴프레서로 한 단계 진화한 제습능력</p>
+                            <a href="#" class="ico-half-arr"><img src="images/ico_half_arr_w.svg" alt="arr"></a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide ap-air4">
+                        <div class="inner">
+                            <h2 class="ap-title">에어가전</h2>
+                            <div class="ap-menu">
+                                <a href="#">에어컨</a>
+                                <a href="#">공기청정기</a>
+                                <a href="#">제습기</a>
+                                <a href="#">에어워셔 가습기</a>
+                                <a href="#">스포워셔</a>
+                            </div>
+                            <h2 class="ap-subtitle">위니아 가습기</h2>
+                            <p class="ap-text">자연의 원리로 완성된 마이크로 모이스처 건강습도존</p>
+                            <a href="#" class="ico-half-arr"><img src="images/ico_half_arr_w.svg" alt="arr"></a>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide ap-air5">
+                        <div class="inner">
+                            <h2 class="ap-title">에어가전</h2>
+                            <div class="ap-menu">
+                                <a href="#">에어컨</a>
+                                <a href="#">공기청정기</a>
+                                <a href="#">제습기</a>
+                                <a href="#">에어워셔 가습기</a>
+                                <a href="#">스포워셔</a>
+                            </div>
+                            <h2 class="ap-subtitle">위니아 스포워셔</h2>
+                            <p class="ap-text">휴대하기 편한 텀블러 디자인으로 좁은 공간에서도<br>
+                                활용할 수 있는 미니 공기청정기와 자연가습기</p>
+                            <a href="#" class="ico-half-arr"><img src="images/ico_half_arr_w.svg" alt="arr"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
 
-        <!-- appliances -->
-        <section class="appliances"></section>
 
 
         <!-- social -->
-        <section class="social"></section>
+        <section class="social">
+            <div class="inner">
+                <h2 class="social-title">소셜 위니아</h2>
+                <div class="social-menu clearfix">
+                    <a href="#">위니아 스토리</a>
+                    <a href="#">추천 레시피</a>
+                    <a href="#">제품 리뷰</a>
+                </div>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide sc-1">
+                            <div class="sc-inner">
+                                <div class="sw-sc1-1">
+                                    <span class="sc1-1"></span>
+                                    <p class="sc-title">
+                                        위니아 둘레바람 에어컨 사계절 활용법
+                                    </p>
+                                    <p class="sc-subtitle">
+                                        사계절 내내 위니아 둘레바람 에어컨을 활용해보세요
+                                    </p>
+                                </div>
+
+                                <div class="sw-sc1-2">
+                                    <span class="sc1-2"></span>
+                                    <p class="sc-title">
+                                        2022 국가브랜드경쟁력지수 1위
+                                    </p>
+                                    <p class="sc-subtitle">
+                                        딤채 국가브랜드경쟁력지수 9년 연속 1위 수상
+                                    </p>
+                                </div>
+
+                                <div class="sw-sc1-3">
+                                    <span class="sc1-3"></span>
+                                    <p class="sc-title">
+                                        나를 위한 편한가전 WINIA
+                                    </p>
+                                    <p class="sc-subtitle">
+                                        위니아 공식 인스타그램을 팔로우해주세요!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide sc-2">
+
+                        </div>
+                        <div class="swiper-slide sc-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
 
 
         <!-- support -->
