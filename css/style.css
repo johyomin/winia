@@ -758,7 +758,7 @@ body {
 }
 
 .popular-menu-active::after {
-    width: 100% !important;
+    width: 150px !important;
 }
 
 
@@ -1048,7 +1048,6 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-    border: 3px solid plum;
 }
 
 .social .inner .social-title {
@@ -1092,33 +1091,25 @@ body {
     background: #e0e0e0;
 }
 
-.sw-sc1-1 {
+.social-slide1 {
     position: relative;
     display: block;
     float: left;
 }
 
-.sw-sc1-2 {
+.social-slide2 {
     position: relative;
     display: block;
     float: left;
 }
 
-.sw-sc1-3 {
+.social-slide3 {
     position: relative;
     display: block;
     float: left;
 }
 
-.sc-inner{
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: 3px solid pink;
-}
-
-.sc-1 .sc1-1 {
+.social-air {
     position: relative;
     display: block;
     width: 400px;
@@ -1128,7 +1119,7 @@ body {
     border-radius: 30px;
 }
 
-.sc-1 .sc1-2 {
+.social-reward {
     position: relative;
     display: block;
     width: 400px;
@@ -1138,7 +1129,7 @@ body {
     border-radius: 30px;
 }
 
-.sc-1 .sc1-3 {
+.social-event {
     position: relative;
     display: block;
     width: 400px;
@@ -1164,8 +1155,223 @@ body {
     color: #666;
 }
 
+.social-menu-active {}
+
 
 /* support */
+.support {
+    position: relative;
+    display: block;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.support .inner {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.support-1 {
+    position: relative;
+    display: block;
+    float: left;
+    width: 330px;
+    height: 500px;
+    background-color: #083c71;
+    margin-right: 25px;
+}
+
+.support-2 {
+    position: relative;
+    display: block;
+    float: left;
+    width: 330px;
+    height: 500px;
+    background: url('../images/support2.jpg') no-repeat center;
+    background-size: contain;
+    margin-right: 25px;
+
+}
+
+.support-3 {
+    position: relative;
+    display: block;
+    float: left;
+    width: 330px;
+    height: 500px;
+    background: url('../images/support3.jpg') no-repeat center;
+    background-size: contain;
+    margin-right: 25px;
+
+}
+
+.support-4 {
+    position: relative;
+    display: block;
+    float: left;
+    width: 330px;
+    height: 500px;
+    background-color: #e9ecf1;
+}
+
+.customer {
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #222;
+}
+
+
+.support1-text {
+    font-size: 28px;
+    font-weight: 400;
+    color: white;
+    margin-top: 50px;
+    margin-left: 40px;
+}
+
+.support1-text strong {
+    font-weight: 700;
+}
+
+.support-more {
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    border: 1px solid #fff;
+    color: #fff;
+    width: 247px;
+    height: 58px;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 20px 87px;
+    line-height: 16px;
+}
+
+.support2-text1 {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: 45px;
+    display: block;
+    font-size: 18px;
+    color: #222;
+}
+
+
+.support2-text2 {
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left: 56px;
+    display: block;
+    color: #222;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+
+.support3-text1 {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: 62px;
+    display: block;
+    font-size: 18px;
+    color: #222;
+}
+
+
+.support3-text2 {
+    position: absolute;
+    width: 100%;
+    top: 80px;
+    left: 69px;
+    display: block;
+    color: #222;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.support-4 dl {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 275px;
+    height: 245px;
+}
+
+.support-4 dt {
+    position: relative;
+    display: block;
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.support-4 dd {
+    position: relative;
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #222;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 17px;
+}
+
+.support-4 dd:last-child {
+    border-bottom: 0;
+}
+
+
+
+
+
+
+
+
+.support-service {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    border: 1px solid #222;
+    color: #222;
+    width: 247px;
+    height: 58px;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 20px 61px;
+    line-height: 16px;
+}
+
+.support-time {
+    position: absolute;
+    width: 100%;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    font-size: 14px;
+    color: #003b70;
+    text-align: center;
+}
+
+
+
+
+
+
 
 
 

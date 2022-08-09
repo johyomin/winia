@@ -125,6 +125,27 @@ window.onload = function () {
         apMenu.eq(swApKit.realIndex).addClass('ap-menu-active');
     });
 
+    // social sw
+    let socialMenu = $('.social-menu a');
+    $.each(socialMenu, function (index, item) {
+        $(this).click(function (event) {
+            // href 막기
+            event.preventDefault();
+            swSocial.slideTo(index + 1);
+        });
+    });
+
+
+    socialMenu.eq(0).addClass('social-menu-active');
+
+    let swSocial = new Swiper('.sw-social', {
+
+    });
+
+    swSocial.on('slideChange', function () {
+        socialMenu.removeClass('social-menu-active');
+        socialMenu.eq(swSocial.realIndex).addClass('social-menu-active');
+    });
 
 
 
