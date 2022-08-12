@@ -61,6 +61,10 @@
             <button class="modal-close"></button>
         </div>
     </div>
+
+    <!-- gotop -->
+    <div class="gotop"></div>
+
     <div class="wrap">
         <!-- header -->
         <header class="header">
@@ -444,11 +448,11 @@
         <!-- popular-item -->
         <section class="popular-item">
             <h2>인기 추천 가전</h2>
-            <div class="popular-menu">
-                <a href="#">에어가전</a>
-                <a href="#">생활가전</a>
-                <a href="#">주방가전</a>
-            </div>
+            <ul class="popular-menu">
+                <li><a href="#">에어가전</a></li>
+                <li><a href="#">생활가전</a></li>
+                <li><a href="#">주방가전</a></li>
+            </ul>
             <div class="swiper-container sw-popular">
                 <div class="swiper-wrapper">
 
@@ -519,7 +523,6 @@
         <section class="appliances">
             <div class="swiper-container sw-ap">
                 <div class="swiper-wrapper">
-
                     <div class="swiper-slide ap-kitchen1">
                         <div class="inner">
                             <h2 class="ap-title">주방가전</h2>
@@ -812,22 +815,32 @@
                     <a href="#">추천 레시피</a>
                     <a href="#">제품 리뷰</a>
                 </div>
+
                 <div class="swiper-container sw-social">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide sw-social1">
                             <div class="social-slide1">
-                                <a href="#"><span class="social-air"></span>
+                                <a href="#">
+                                    <div class="social-img">
+                                        <span class="social-air"></span>
+                                        <i class="social-blog"></i>
+                                        <span class="social-ico"></span>
+                                    </div>
                                     <p class="sc-title">
-                                        위니아 둘레바람 에어컨 사계절 활용법
+                                        식재료 보관의 끝판왕! 위니아 프렌치 냉장고
                                     </p>
                                     <p class="sc-subtitle">
-                                        사계절 내내 위니아 둘레바람 에어컨을 활용해보세요
+                                        위니아 프렌치 냉장고로 알아보는 식재료 보관 꿀팁!
                                     </p>
                                 </a>
                             </div>
-
                             <div class="social-slide2">
-                                <a href="#"><span class="social-reward"></span>
+                                <a href="#">
+                                    <div class="social-img">
+                                        <span class="social-reward"> </span>
+                                        <i class="social-facebook"></i>
+                                        <span class="social-ico"></span>
+                                    </div>
                                     <p class="sc-title">
                                         2022 국가브랜드경쟁력지수 1위
                                     </p>
@@ -836,61 +849,76 @@
                                     </p>
                                 </a>
                             </div>
-
                             <div class="social-slide3">
-                                <a href="#"><span class="social-event"></span>
+                                <a href="#">
+                                    <div class="social-img">
+                                        <span class="social-event"></span>
+                                        <i class="social-insta"></i>
+                                        <span class="social-ico"></span>
+                                    </div>
                                     <p class="sc-title">
-                                        나를 위한 편한가전 WINIA
+                                        위니아 NEW mini 건조기
                                     </p>
                                     <p class="sc-subtitle">
-                                        위니아 공식 인스타그램을 팔로우해주세요!
+                                        이달의 신상! 위니아 NEW mini 건조기
                                     </p>
                                 </a>
                             </div>
                         </div>
+
                         <div class="swiper-slide sw-social2">
-                            <div class="recipe1">
-                                <a href="#"></a>
+                            <a href="#" class="recipe1"></a>
+                            <a href="#" class="recipe2"></a>
+                            <div class="recipe-random"></div>
+
+                            <div class="text-random">
                                 <h4>[201호 홈레시피] 프렌치 어니언 스프</h4>
                                 <p>WINIA X 딤채쿡
                                     <br> 방구석 셰프의 프렌치 어니언 스프 레시피
                                 </p>
                             </div>
 
-                            <div class="recipe2">
-                                <a href="#"></a>
+                            <div class="text-random">
                                 <h4>[201호 홈레시피] 누룽지삼계탕</h4>
                                 <p>딤채쿡으로 더 간단하고 맛있게
                                     <br> 누룽지 삼계탕 만들기
                                 </p>
                             </div>
 
-                            <div class="recipe-random"></div>
                             <div class="recipe-text">
                                 <p>딤채쿡으로 만드는
                                     <br>건강한 레시피를 소개합니다!
                                 </p>
-                                <a href="#"><span class="recipe-more">자세히보기</span></a>
+                                <a href="#" class="recipe-more">자세히보기<img src="images/ico_half_arr.svg" alt="more"></a>
                             </div>
                         </div>
+
+
+
+
                         <div class="swiper-slide sw-social3">
                             <a href="#" class="sc-review1">
-                                <span class="review-photo"></span>
-                                <p>위니아 프렌치냉장고 재료 본연의 맛과 신선함을 FLEX!</p>
-                                <p>지방 가기 전 샐러드 몇 개 주문해두고 1개가 남아 이건 집에 오면 물 생기고 풀이 다 죽었겠지,, 생각했는데 왠걸요! 위니아 프렌치 냉장고 덕분에
+                                <span class="review-photo1"></span>
+                                <p class="review-text1">위니아 프렌치냉장고 재료 본연의 맛과 신선함을 FLEX!</p>
+                                <p class="review-text2">지방 가기 전 샐러드 몇 개 주문해두고 1개가 남아 이건 집에 오면 물 생기고 풀이 다 죽었겠지,, 생각했는데
+                                    왠걸요! 위니아 프렌치 냉장고 덕분에
                                     야채의 신선한 맛과 아삭함이 그대로 살아 있었어요.
                                     왠지 돈 굳은 기분이다</p>
                             </a>
+
                             <a href="#" class="sc-review2">
-                                <span class="review-photo"></span>
-                                <p>'무수분 수육' 만들기도 만능 저당밥솥 딤채쿡으로 문제없이!</p>
-                                <p>지난 김장 때 무수분 수육을 처음 만들어보고 무수분 고기의 맛을 알게 되었는데요. 딤채쿡 당질저감50의 당질저감 트레이를 활용해 무수분 수육을 쉽게 만들
+                                <span class="review-photo2"></span>
+                                <p class="review-text1">'무수분 수육' 만들기도 만능 저당밥솥 딤채쿡으로 문제없이!</p>
+                                <p class="review-text2">지난 김장 때 무수분 수육을 처음 만들어보고 무수분 고기의 맛을 알게 되었는데요. 딤채쿡 당질저감50의 당질저감
+                                    트레이를 활용해 무수분 수육을 쉽게 만들
                                     수 있을 것 같아 도전해 봤어요!</p>
                             </a>
+
                             <a href="#" class="sc-review3">
-                                <span class="review-photo"></span>
-                                <p>재택근무, 운전 등으로 장시간 앉아있는 날에 꼭 필요해요</p>
-                                <p>하루종일 컴퓨터 앞에 앉아있으면 허리가 뻐근하고 아픈데요. 위니아me 복부·허리마사지기는 의자에 앉아 편하게 사용할 수 있어서 좋아요.</p>
+                                <span class="review-photo3"></span>
+                                <p class="review-text1">재택근무, 운전 등으로 장시간 앉아있는 날에 꼭 필요해요</p>
+                                <p class="review-text2">하루종일 컴퓨터 앞에 앉아있으면 허리가 뻐근하고 아픈데요. 위니아me 복부·허리마사지기는 의자에 앉아 편하게 사용할
+                                    수 있어서 좋아요.</p>
                             </a>
                         </div>
                     </div>
@@ -943,7 +971,137 @@
 
 
         <!-- footer -->
-        <footer class="footer"></footer>
+        <footer class="footer">
+            <div class="inner">
+                <div class="footer-top">
+
+                    <div class="footer-item">
+                        <div class="footer-depth1">
+                            <h2>제품</h2>
+                            <ul>
+                                <li><a href="#">냉장고/와인셀러</a></li>
+                                <li><a href="#">김치냉장고</a></li>
+                                <li><a href="#">세탁기</a></li>
+                                <li><a href="#">오븐/전자레인지</a></li>
+                                <li><a href="#">전기밥솥</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-depth2">
+                            <h2>none</h2>
+                            <ul>
+                                <li><a href="#">전기레인지</a></li>
+                                <li><a href="#">건조기</a></li>
+                                <li><a href="#">식기세척기</a></li>
+                                <li><a href="#">에어컨</a></li>
+                                <li><a href="#">공기청정기</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-info">
+                        <h2>기업정보</h2>
+                        <ul>
+                            <li><a href="#">회사소개</a></li>
+                            <li><a href="#">비전</a></li>
+                            <li><a href="#">CEO 인사말</a></li>
+                            <li><a href="#">회사연혁</a></li>
+                            <li><a href="#">오시는길</a></li>
+                            <li><a href="#">투자정보</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-center">
+                        <h2>홍보센터</h2>
+                        <ul>
+                            <li><a href="#">언론보도</a></li>
+                            <li><a href="#">공지사항</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-recipe">
+                        <h2>추천레시피</h2>
+                        <ul>
+                            <li><a href="#">딤채쿡 레시피</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-support">
+                        <h2>고객지원</h2>
+                        <p class="support-number">1588-9588</p>
+                        <div class="support-day">
+                            <p>평일 : 09:00 ~ 18:00</p>
+                            <p>토요일 : 09:00 ~ 13:00</p>
+                            <p>공휴일 / 일요일 휴무</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="footer-middle">
+                    <ul class="footer-miidle-depth1">
+                        <li><a href="#">윤리강령 온라인센터</a></li>
+                        <li><a href="#">내부정보관리규정</a></li>
+                        <li><a href="#">개인정보취급방침</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">이벤트 규약</a></li>
+                        <li><a href="#">이메일 무단 수집거부</a></li>
+                    </ul>
+                    <ul class="footer-miidle-depth2">
+                        <li class="footer-middle-img1"><a href="#"><img src="images/icon_sns_yt_b@2x.png"
+                                    alt="youtube"></a></li>
+                        <li class="footer-middle-img2"><a href="#"><img src="images/icon_sns_in_b@2x.png"
+                                    alt="insta"></a></li>
+                        <li class="footer-middle-img3"><a href="#"><img src="images/icon_sns_fb_b@2x.png"
+                                    alt="facebook"></a></li>
+                        <li class="footer-middle-img4"><a href="#"><img src="images/icon_sns_bg_b@2x.png"
+                                    alt="blog"></a></li>
+                        <li class="footer-middle-img5"><a href="#"><img src="images/icon_sns_nv_b@2x.png"
+                                    alt="naver post"></a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="footer-bottom-left">
+                        <p class="footer-bottom-depth1">㈜위니아는 통신판매중개자로 통신판매의 당사자가 아니며, 개별 판매자가 등록한 상품, 거래 정보 및 거래 등에 대해
+                            책임을 지지 않습니다.</p>
+                        <p class="footer-bottom-depth2">
+                            <span>본사 : 광주광역시 광산구 하남산단9번로 110(안청동)</span>
+                            <span>대표이사 : 최찬수</span>
+                            <span>사업자등록번호: 312-81-38164</span>
+                        </p>
+                        <p class="footer-copy">Copyright WINIA Co.,LTD. All Rights Reserved.</p>
+                    </div>
+                    <div class="footer-site">
+                        <select name="FAMILY SITE" class="footer-select">
+                            <option>FAMILY SITE</option>
+                            <option>대유위니아그룹</option>
+                            <option>위니아 영문</option>
+                            <option>위니아e샵</option>
+                            <option>위니아전자</option>
+                            <option>위니아에이드</option>
+                            <option>위니아미</option>
+                            <option>위니아전자매뉴팩처링</option>
+                            <option>대유글로벌</option>
+                            <option>대유에이텍</option>
+                            <option>대유플러스</option>
+                            <option>대유에이피</option>
+                            <option>대유금형</option>
+                            <option>대유홀딩스</option>
+                            <option>대유몽베르트컨트리클럽</option>
+                            <option>푸른산페어웨이</option>
+                            <option>위니아전자 미국</option>
+                            <option>위니아전자 멕시코</option>
+                            <option>위니아전자 칠레</option>
+                            <option>위니아전자 페루</option>
+                            <option>위니아전자 파나마</option>
+                            <option>위니아전자 러시아</option>
+                            <option>위니아전자 프랑스</option>
+                            <option>위니아전자 스페인</option>
+                            <option>위니아전자 루마니아</option>
+                            <option>위니아전자 중국</option>
+                            <option>위니아전자 말레이시아</option>
+                        </select>
+                    </div>
+                </div>
+
+
+            </div>
+        </footer>
 
 
 

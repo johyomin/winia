@@ -20,6 +20,15 @@ $(document).ready(function () {
 });
 
 window.onload = function () {
+
+    // gotop
+    let go_top = $('.gotop');
+    go_top.click(function () {
+        $('html').animate({
+            scrollTop: 0
+        }, 500);
+    });
+
     // swiper
     let swVisual = new Swiper('.sw-visual', {
         effect: "fade",
@@ -104,7 +113,7 @@ window.onload = function () {
     });
 
 
-    // ap-kitchen sw
+    // ap sw
     let apMenu = $('.ap-menu a');
     $.each(apMenu, function (index, item) {
         $(this).click(function (event) {
@@ -117,8 +126,7 @@ window.onload = function () {
 
     apMenu.eq(0).addClass('ap-menu-active');
 
-    let swApKit = new Swiper('.sw-ap', {
-    });
+    let swApKit = new Swiper('.sw-ap', {});
 
     swApKit.on('slideChange', function () {
         apMenu.removeClass('ap-menu-active');
@@ -126,36 +134,6 @@ window.onload = function () {
     });
 
     // social sw
-    let socialMenu = $('.social-menu a');
-    $.each(socialMenu, function (index, item) {
-        $(this).click(function (event) {
-            // href 막기
-            event.preventDefault();
-            swSocial.slideTo(index + 1);
-        });
-    });
-
-
-    socialMenu.eq(0).addClass('social-menu-active');
-
-    let swSocial = new Swiper('.sw-social', {
-
-    });
-
-    swSocial.on('slideChange', function () {
-        socialMenu.removeClass('social-menu-active');
-        socialMenu.eq(swSocial.realIndex).addClass('social-menu-active');
-    });
-
-
-
-
-
-
-
-
-
-
-
+    let swiper = new Swiper(".sw-social", {});
 
 }
