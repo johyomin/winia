@@ -76,6 +76,7 @@ body {
     right: 37%;
     font-size: 130px;
     color: rgba(250, 19, 19, 0.1);
+    z-index: -9;
 }
 
 .modal-main {
@@ -310,7 +311,7 @@ body {
     position: relative;
     display: block;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin: 0 auto;
 }
 
@@ -318,7 +319,7 @@ body {
     position: relative;
     display: block;
     width: 100%;
-    height: 800px;
+    height: 100%;
 }
 
 .visual .sw-visual .swiper-slide {
@@ -718,28 +719,30 @@ body {
     display: block;
     width: 1405px;
     height: 100%;
+    z-index: 9;
 }
 
 .popular-menu {
     position: absolute;
     display: block;
     text-align: center;
-    top: 130px;
-    left: 41%;
+    top: 95px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
 .popular-menu li {
     float: left;
+    margin: 0 20px;
 }
 
 
 .popular-menu a {
     position: relative;
-    display: block;
+    display: inline-block;
     color: #222;
     width: 100%;
-    margin: 0 20px;
     padding: 10px 0 12px;
     font-size: 18px;
     line-height: 1;
@@ -791,7 +794,7 @@ body {
 .popular-item .inner .popular-box {
     position: relative;
     display: block;
-    top: 25%;
+    top: 23%;
     width: calc(1305px / 3);
     height: 600px;
     background-color: #f3f3f3;
@@ -823,39 +826,47 @@ body {
     color: #222;
 }
 
-.popular-item .inner .popular-box a {
-    position: relative;
+/* popular-more */
+
+.popular-item .inner .popular-more {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+
     display: block;
-    top: 33%;
-    left: 36%;
     height: 38px;
-    width: 100%;
+    width: 115px;
     line-height: 1;
     font-size: 16px;
     padding: 11px 0;
     color: #222;
     font-weight: 700;
+    text-align: center;
 }
 
-.popular-item .inner .popular-box a>img {
+.popular-item .inner .popular-more::after {
+    content: '';
     position: absolute;
-    top: 12px;
-    left: 80px;
-    display: block;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #222;
+    transition: width 0.5s;
+}
+
+.popular-item .inner .popular-more:hover::after {
+    width: 100%;
+}
+
+.popular-item .inner .popular-more>img {
+    position: relative;
+    display: inline-block;
     width: 32px;
     height: 11px;
+    vertical-align: 2px;
 }
-
-.popular-item .inner .popular-box a:hover {
-    position: relative;
-    display: block;
-    width: 50px;
-    height: 1px;
-    background-color: #222;
-    transition: 0.3s ease;
-}
-
-
 
 
 
@@ -949,6 +960,8 @@ body {
     background-size: cover;
 }
 
+/* appliances */
+
 .appliances {
     position: relative;
     display: block;
@@ -956,12 +969,72 @@ body {
     height: 771px;
 }
 
+
+.ap-title {
+    position: absolute;
+    top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    z-index: 9;
+    color: #fff;
+}
+
+.appliances > .inner {
+    position: relative;
+    display: block;
+}
+
+.ap-menu {
+    position: absolute;
+    display: block;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 780px;
+    z-index: 9;
+}
+
+.ap-menu li {
+    float: left;
+    margin-right: 39px;
+}
+
+.ap-menu a {
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    width: 100%;
+}
+
+.ap-menu a::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    transition: all 0.3s;
+}
+
+.ap-menu-active {
+    font-weight: 700 !important;
+}
+
+.ap-menu-active::after {
+    width: 100% !important;
+}
+
+
 .sw-ap {
     position: relative;
     display: block;
     width: 100%;
     height: 100%;
-    z-index: 99;
 }
 
 .sw-ap .inner {
@@ -970,48 +1043,6 @@ body {
     color: #fff;
     width: 100%;
     height: 100%;
-}
-
-
-
-.sw-ap .ap-title {
-    position: absolute;
-    display: block;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 28px;
-    font-weight: 700;
-}
-
-.ap-menu {
-    position: absolute;
-    display: block;
-    width: 800px;
-    top: 17%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-
-.ap-menu a {
-    /* display: inline-block; */
-    font-size: 18px;
-    color: #fff;
-    width: 100%;
-    padding: 17px;
-}
-
-
-.ap-menu a::after {
-    content: '';
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: #fff;
-    transition: all 0.3s;
 }
 
 .sw-ap .ap-subtitle {
@@ -1045,19 +1076,11 @@ body {
     transform: translateX(-50%);
     width: 112px;
     height: 17px;
-
+    transition: transform 0.3s ease-out;
 }
 
 .sw-ap .ico-half-arr img:hover {
-    transition: transform 0.5s ease-out;
-}
-
-.ap-menu-active {
-    font-weight: 700;
-}
-
-.ap-menu-active::after {
-    width: 100%;
+    transform: translateX(-35%);
 }
 
 
@@ -1268,6 +1291,51 @@ body {
     display: inline-block;
 }
 
+.recipe-menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+.recipe-menu a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #003b70;
+    background-size: cover;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+
+}
+.recipe-menu a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 112px;
+    height: 20px;
+    background: url('../images/ico_half_arr_w.svg') no-repeat center;
+    background-size: cover;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.recipe-menu a:hover::before {
+    visibility: visible;
+    opacity: 1;
+}
+.recipe-menu a:hover::after {
+    visibility: visible;
+    opacity: 1;
+}
+
 .recipe1 {
     position: relative;
     display: block;
@@ -1276,13 +1344,7 @@ body {
     background: url('../images/social2-1.png') no-repeat center;
     background-size: cover;
     border-radius: 30px;
-}
-
-.recipe1:hover {
-    width: 112px;
-    height: 17px;
-    background-image: url('../images/ico_half_arr_w.svg') no-repeat center;
-    background-size: 112px auto;
+    overflow: hidden;
 }
 
 .recipe2 {
@@ -1294,31 +1356,39 @@ body {
     background-size: cover;
     border-radius: 30px;
     margin-top: 25px;
+    overflow: hidden;
 }
 
-.recipe-random {
+
+.recipe-content {
     position: absolute;
-    top: 0%;
-    left: 18%;
+    left: 255px;
+    top: 0;
+}
+
+.recipe-cont {
+    position: relative;
+    display: none;
+}
+
+.recipe-cont:first-child {
     display: block;
-    width: 511px;
-    height: 511px;
-    background: url('../images/social2-2.jpg') no-repeat center;
-    background-size: cover;
-    border-radius: 30px;
 }
 
 .text-random {
     position: absolute;
-    top: 15%;
-    right: 13%;
+    top: 70px;
+    left: 575px;
     display: block;
+    width: 300px;
 }
+
 
 .text-random h4 {
     font-size: 26px;
     font-weight: 700;
     color: #222;
+    white-space: nowrap;
 }
 
 .text-random p {
@@ -1327,9 +1397,31 @@ body {
     margin-top: 25px;
 }
 
+
+.recipe-random {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 511px;
+    height: 511px;
+    border-radius: 30px;
+}
+
+.recipe-bg-1 {
+    background: url('../images/social2-1.png') no-repeat center;
+    background-size: cover;
+}
+
+.recipe-bg-2 {
+    background: url('../images/social2-2.jpg') no-repeat center;
+    background-size: cover;
+}
+
+
 .recipe-text {
     position: absolute;
-    top: 55%;
+    top: 300px;
     right: 345px;
     display: block;
 }
@@ -1430,28 +1522,6 @@ body {
     text-overflow: ellipsis;
     word-wrap: break-word;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* support */
