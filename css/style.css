@@ -990,16 +990,21 @@ body {
 .ap-menu {
     position: absolute;
     display: block;
-    top: 200px;
+    top: 135px;
     left: 50%;
     transform: translateX(-50%);
-    width: 780px;
     z-index: 9;
+    white-space: nowrap;
+    font-size: 0;
 }
 
 .ap-menu li {
-    float: left;
+    display: inline-block;
     margin-right: 39px;
+}
+
+.ap-menu li:last-child {
+    margin-right: 0;
 }
 
 .ap-menu a {
@@ -1098,7 +1103,6 @@ body {
     position: relative;
     display: block;
     width: 100%;
-    height: 100%;
 }
 
 .social .inner .social-title {
@@ -1142,37 +1146,59 @@ body {
     background: #e0e0e0;
 }
 
+.social-menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -11px;
+    width: 0%;
+    height: 2px;
+    background: #222;
+    transition: width 0.3s;
+}
+
+.social-menu-active {
+    color: #222 !important;
+    font-weight: 700 !important;
+}
+
+.social-menu-active::after {
+    width: 100% !important;
+}
+
+
+/* social section1 */
+
 .sw-social {
     position: absolute;
     top: 32%;
     left: 0%;
     width: 100%;
+    height: 100%;
     display: block;
 }
 
 
-.sw-social1 {
+.sw-social1 > .inner {
     position: relative;
     display: flex;
+    width: 100%;
     justify-content: space-between;
 }
 
 .social-slide1 {
     position: relative;
-    display: block;
-    float: left;
+    display: inline-block;
 }
 
 .social-slide2 {
     position: relative;
-    display: block;
-    float: left;
+    display: inline-block;
 }
 
 .social-slide3 {
     position: relative;
-    display: block;
-    float: left;
+    display: inline-block;
 }
 
 
@@ -1237,8 +1263,6 @@ body {
     opacity: 1;
 }
 
-
-
 .social-blog {
     position: absolute;
     top: 15px;
@@ -1294,7 +1318,7 @@ body {
 
 .sc-title {
     position: relative;
-    display: block;
+    display: inline-block;
     font-size: 28px;
     font-weight: 700;
     width: 440px;
@@ -1311,8 +1335,6 @@ body {
     font-size: 18px;
     color: #666;
 }
-
-.social-menu-active {}
 
 
 /* social section2 */
@@ -1512,7 +1534,7 @@ body {
 
 
 /* social section3 */
-.sw-social3 {
+.sw-social3>.inner {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -1558,6 +1580,7 @@ body {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    margin: 35px 0 25px 0;
 }
 
 .review-text2 {
@@ -1778,14 +1801,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
 /* footer */
 .footer {
     width: 100%;
@@ -1797,11 +1812,9 @@ body {
     border-bottom: 1px solid #e0e0e0;
 }
 
-.footer .footer-top .inner {
+.footer .footer-top > .inner {
     position: relative;
-    width: 100%;
     display: flex;
-    justify-content: space-between;
     border: 1px solid red;
 }
 
@@ -1810,37 +1823,35 @@ body {
     position: relative;
     display: flex;
     justify-self: space-between;
-    flex-shrink: 0;
+    width: 165px;
 }
 
 .footer-info {
     position: relative;
     padding: 0px 0 72px 37px;
-    flex-shrink: 1;
+    /* width: 65px; */
 }
 
 
 .footer-center {
     position: relative;
     padding: 0px 0 72px 37px;
-    flex-shrink: 1;
-
+    /* width: 65px; */
 }
 
 
 .footer-recipe {
     position: relative;
     padding: 0px 0 72px 37px;
-    flex-shrink: 1;
-
+    /* width: 65px; */
 }
 
 
 .footer-support {
     position: relative;
     padding: 0px 0 72px 37px;
-    flex-shrink: 1;
-
+    /* width: 65px; */
+    white-space: nowrap;
 }
 
 

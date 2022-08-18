@@ -35,6 +35,7 @@ window.onload = function () {
         loop: true,
         autoplay: {
             delay: 10000,
+            disableOnInteraction: false
         },
         navigation: {
             prevEl: '.sw-visual-prev',
@@ -109,7 +110,6 @@ window.onload = function () {
         });
     });
 
-
     popularMenu.eq(0).addClass('popular-menu-active');
 
     let swPopular = new Swiper('.sw-popular', {
@@ -122,37 +122,110 @@ window.onload = function () {
     });
 
 
-    // ap sw
+    // ap sw1
     // 클래스 ap-menu 의 모든 a태그를 변수 apMenu에 저장
-    let apMenu = $('.ap-menu a');
+    let apMenu1 = $('.apm1 a');
     // apMenu는 각각 기능을한다
     // index는 0부터 시작하는 숫자
     // item은 html의 태그를 뜻함
-    $.each(apMenu, function (index, item) {
+    $.each(apMenu1, function (index, item) {
         $(this).click(function (event) {
             // href 막기
             event.preventDefault();
-            swAp.slideTo(index + 1);
+            swAp1.slideTo(index);
         });
     });
 
 
-    apMenu.eq(0).addClass('ap-menu-active');
+    apMenu1.eq(0).addClass('ap-menu-active');
 
 
-    // let swAp = new Swiper('.sw-ap', {});
+    let swAp1 = new Swiper('.sw-ap1', {});
 
-    // swAp.on('slideChange', function () {
-    //     apMenu.removeClass('ap-menu-active');
-    //     apMenu.eq(swAp.realIndex).addClass('ap-menu-active');
-    // });
+    swAp1.on('slideChange', function () {
+        apMenu1.removeClass('ap-menu-active');
+        apMenu1.eq(swAp1.realIndex).addClass('ap-menu-active');
+    });
+
+// ap sw2
+    // 클래스 ap-menu 의 모든 a태그를 변수 apMenu에 저장
+    let apMenu2 = $('.apm2 a');
+    // apMenu는 각각 기능을한다
+    // index는 0부터 시작하는 숫자
+    // item은 html의 태그를 뜻함
+    $.each(apMenu2, function (index, item) {
+        $(this).click(function (event) {
+            // href 막기
+            event.preventDefault();
+            swAp2.slideTo(index);
+        });
+    });
 
 
+    apMenu2.eq(0).addClass('ap-menu-active');
 
+
+    let swAp2 = new Swiper('.sw-ap2', {});
+
+    swAp2.on('slideChange', function () {
+        apMenu2.removeClass('ap-menu-active');
+        apMenu2.eq(swAp2.realIndex).addClass('ap-menu-active');
+    });
+
+// ap sw3
+    // 클래스 ap-menu 의 모든 a태그를 변수 apMenu에 저장
+    let apMenu3 = $('.apm3 a');
+    // apMenu는 각각 기능을한다
+    // index는 0부터 시작하는 숫자
+    // item은 html의 태그를 뜻함
+    $.each(apMenu3, function (index, item) {
+        $(this).click(function (event) {
+            // href 막기
+            event.preventDefault();
+            swAp3.slideTo(index);
+        });
+    });
+
+
+    apMenu3.eq(0).addClass('ap-menu-active');
+
+
+    let swAp3 = new Swiper('.sw-ap3', {});
+
+    swAp3.on('slideChange', function () {
+        apMenu3.removeClass('ap-menu-active');
+        apMenu3.eq(swAp3.realIndex).addClass('ap-menu-active');
+    });
 
 
     // social sw
-    let swiper = new Swiper(".sw-social", {});
+    let socialMenu = $('.social-menu a');
+    // apMenu는 각각 기능을한다
+    // index는 0부터 시작하는 숫자
+    // item은 html의 태그를 뜻함
+    $.each(socialMenu, function (index, item) {
+        $(this).click(function (event) {
+            // href 막기
+            event.preventDefault();
+            swSocial.slideTo(index);
+        });
+    });
+
+
+    socialMenu.eq(0).addClass('social-menu-active');
+
+
+    let swSocial = new Swiper('.sw-social', {});
+
+    swSocial.on('slideChange', function () {
+        socialMenu.removeClass('social-menu-active');
+        socialMenu.eq(swSocial.realIndex).addClass('social-menu-active');
+    });
+
+
+
+
+
 
     // 소셜 탭 기능
     let recipeMenuA = $('.recipe-menu a');
