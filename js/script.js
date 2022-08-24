@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('html').css('overflow', 'hidden');
+    // $('html').css('overflow', 'hidden');
 
     let modalWrap = $('.modal-wrap');
     let modalClose = $('.modal-close');
@@ -20,6 +20,44 @@ $(document).ready(function () {
 });
 
 window.onload = function () {
+    // 메뉴기능
+    let gnb = $('.gnb');
+    let mainMenu = $('.menu li');
+    let subMenuWrap = $('.submenu-wrap');
+    let innerSub = $('.inner-sub');
+
+    $.each(mainMenu, function(index, item){
+// menu의 li는 기능해라 순서대로 아이템이
+        $(this).mouseenter(function(){
+            // 메인메뉴에 마우스를 올리면 기능해라
+            subMenuWrap.stop().fadeIn();
+            //서브메뉴전체가 나타나라
+            innerSub.removeClass('inner-sub-active');
+            // 서브이너는 서브이너 액티브를 없애라
+            innerSub.eq(index).addClass('inner-sub-active');
+            // 서브이너는 각각 순서대로 서브이너 액티브를 나타내라
+        });
+
+
+        $(this).mouseleave(function(){
+            // 마우스가 사라지면 mainmenu 기능해라
+            subMenuWrap.stop().fadeOut();
+            // 서브메뉴전체가 사라진다
+            innerSub.removeClass('inner-sub-active');
+            // 서브이너는 서브이너 액티브를 없앤다
+        });
+
+    } );
+
+    innerSub.mouseleave(function(){
+        // 서브이너에 마우스가 사라지면 기능해라
+        subMenuWrap.stop().fadeOut();
+                // 서브메뉴 전체가 사라진다
+        innerSub.removeClass('inner-sub-active');
+                // 서브이너는 서브이너 액티브를 없앤다
+    });
+
+
 
     // gotop
     let go_top = $('.gotop');
