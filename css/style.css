@@ -144,11 +144,13 @@ body {
 }
 
 /* 위로가기 */
+.gotop-wrap {
+    position: relative;
+}
 .gotop {
     position: fixed;
-    bottom: 40px;
     right: 60px;
-    top: auto;
+    bottom: 40px;
     display: block;
     width: 60px;
     height: 60px;
@@ -158,6 +160,19 @@ body {
     border: 0;
     cursor: pointer;
     z-index: 999;
+    margin-top: -90px;  
+    visibility: hidden;  
+}
+
+.gotop-fix {
+    position: absolute;
+    right: 60px;
+    bottom: 40px;
+}
+
+
+.gotop-show {
+    visibility: visible !important;
 }
 
 /* header */
@@ -201,13 +216,14 @@ body {
     left: 15%;
     transform: translateY(-50%);
     display: block;
+    font-size: 0;
 }
 
 .header .gnb .menu li {
     position: relative;
     display: inline-block;
     padding: 33px 7px 33px 35px;
-    border:2px solid red;
+    /* border: 2px solid red; */
 }
 
 
@@ -231,19 +247,13 @@ body {
     transition: all 0.5s;
 }
 
-.header .gnb .menu li>a:hover::after {
+.header .gnb .menu li:hover>a::after {
     width: 100%;
 }
-
-.header_img {
-    position: absolute;
-    top: 25px;
-    right: 0;
-    display: block;
-    width: 475px;
-    height: 255px;
-z-index: 1;
+.gnb-menu-li-active::after  {
+    width: 100% !important;
 }
+
 
 
 /* submenu */
@@ -259,7 +269,7 @@ z-index: 1;
 
 .inner-sub {
     position: absolute;
-    display: block;
+    display: flex;
     width: 100%;
     max-width: 1405px;
     left: 50%;
@@ -343,12 +353,27 @@ z-index: 1;
     color: #666;
 }
 
-.depth2>li>a:hover{
+.depth2>li>a:hover {
     color: #222;
     font-weight: bold;
 }
 
+.header_img {
+    position: relative;
+    /* top: 25px; */
+    /* right: 0; */
+    display: block;
+    width: 475px;
+    height: 255px;
+    z-index: 1;
+    margin-left: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 
+.inner-sub .depth2 .depth3 {
+    margin-bottom: 70px;
+}
 
 /* gnb right */
 .header .gnb .user {

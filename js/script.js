@@ -26,9 +26,11 @@ window.onload = function () {
     let subMenuWrap = $('.submenu-wrap');
     let innerSub = $('.inner-sub');
 
-    $.each(mainMenu, function(index, item){
-// menu의 li는 기능해라 순서대로 아이템이
-        $(this).mouseenter(function(){
+    $.each(mainMenu, function (index, item) {
+        // menu의 li는 기능해라 순서대로 아이템이
+        $(this).mouseenter(function () {
+            // 사라지려는 것을 멈춤다.
+            clearTimeout(hideSubMenuWrapTimer);
             // 메인메뉴에 마우스를 올리면 기능해라
             subMenuWrap.stop().fadeIn();
             //서브메뉴전체가 나타나라
@@ -39,24 +41,44 @@ window.onload = function () {
         });
 
 
-        $(this).mouseleave(function(){
-            // 마우스가 사라지면 mainmenu 기능해라
-            subMenuWrap.stop().fadeOut();
-            // 서브메뉴전체가 사라진다
-            innerSub.removeClass('inner-sub-active');
-            // 서브이너는 서브이너 액티브를 없앤다
+        $(this).mouseleave(function () {
+            // 약간만 늦추자, 즉, 롤아웃시에 즉시 사라지지말고, 조금 기다리자.
+            clearTimeout(hideSubMenuWrapTimer);
+            hideSubMenuWrapTimer = setTimeout(hideSubMenuWrap, 100);
         });
 
-    } );
-
-    innerSub.mouseleave(function(){
-        // 서브이너에 마우스가 사라지면 기능해라
-        subMenuWrap.stop().fadeOut();
-                // 서브메뉴 전체가 사라진다
-        innerSub.removeClass('inner-sub-active');
-                // 서브이너는 서브이너 액티브를 없앤다
     });
 
+    innerSub.mouseenter(function () {
+        // 사라지려는 거는 정지.
+        clearTimeout(hideSubMenuWrapTimer);
+    });
+
+    innerSub.mouseleave(function () {
+        clearTimeout(hideSubMenuWrapTimer);
+        hideSubMenuWrapTimer = setTimeout(hideSubMenuWrap, 100);
+    });
+
+    // 서브메뉴영역에 롤 오버를 하면!!!!   주메뉴의 포커스를 표현한다.
+    // 원 사이트의 문제를 개선했다.
+    $.each(innerSub, function (index, item) {
+        $(this).mouseenter(function () {
+            mainMenu.eq(index).find('>a').addClass('gnb-menu-li-active')
+        })
+        $(this).mouseleave(function () {
+            mainMenu.eq(index).find('>a').removeClass('gnb-menu-li-active')
+        })
+    });
+
+    let hideSubMenuWrapTimer;
+
+    function hideSubMenuWrap() {
+        // 마우스가 사라지면 mainmenu 기능해라
+        subMenuWrap.stop().fadeOut();
+        // 서브메뉴전체가 사라진다
+        innerSub.removeClass('inner-sub-active');
+        // 서브이너는 서브이너 액티브를 없앤다
+    }
 
 
     // gotop
@@ -66,6 +88,42 @@ window.onload = function () {
             scrollTop: 0
         }, 500);
     });
+
+    new Waypoint({
+        element: $('.gotop-wrap'), // html 의 기준이 어딘가?
+        handler: function (direction) {
+            if (direction == 'down') {
+                // console.log('down------------------')
+                go_top.addClass('gotop-fix');
+            } else if (direction == 'up') {
+                // console.log('up***********')
+                go_top.removeClass('gotop-fix');
+            }
+        },
+        offset: '100%'
+    });
+
+    new Waypoint({
+        element: $('.new-item'), // html 의 기준이 어딘가?
+        handler: function (direction) {
+            if (direction == 'down') {
+                go_top.addClass('gotop-show');
+            } else if (direction == 'up') {
+                go_top.removeClass('gotop-show');
+            }
+        },
+        offset: '20%'
+    });
+
+    // 새로고침시 처리
+    let tempSc = $('window').scrollTop();
+    if (tempSc > $('.new-item').offset().top) {
+        go_top.addClass('gotop-show');
+    } else {
+        go_top.removeClass('gotop-show');
+    }
+
+
 
     // swiper
     let swVisual = new Swiper('.sw-visual', {
@@ -185,7 +243,7 @@ window.onload = function () {
         apMenu1.eq(swAp1.realIndex).addClass('ap-menu-active');
     });
 
-// ap sw2
+    // ap sw2
     // 클래스 ap-menu 의 모든 a태그를 변수 apMenu에 저장
     let apMenu2 = $('.apm2 a');
     // apMenu는 각각 기능을한다
@@ -210,7 +268,7 @@ window.onload = function () {
         apMenu2.eq(swAp2.realIndex).addClass('ap-menu-active');
     });
 
-// ap sw3
+    // ap sw3
     // 클래스 ap-menu 의 모든 a태그를 변수 apMenu에 저장
     let apMenu3 = $('.apm3 a');
     // apMenu는 각각 기능을한다
@@ -268,9 +326,9 @@ window.onload = function () {
     // 소셜 탭 기능
     let recipeMenuA = $('.recipe-menu a');
     let recipeCont = $('.recipe-cont');
-    $.each(recipeMenuA, function(index, item){
-        
-        $(this).mouseenter(function(){
+    $.each(recipeMenuA, function (index, item) {
+
+        $(this).mouseenter(function () {
             recipeCont.stop().fadeOut();
             recipeCont.eq(index).stop().fadeIn();
         });
